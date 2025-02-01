@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música Medieval - Historia Completa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: left;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎼 Música Medieval - Historia Completa</h1>
+        <p>Explora en profundidad la evolución de la música en la Edad Media.</p>
+        <a href="#canto_gregoriano" class="button">Canto Gregoriano</a>
+        <a href="#musica_profana" class="button">Música Profana</a>
+        <a href="#polifonia" class="button">Polifonía</a>
+        <a href="#mujeres_musica" class="button">Mujeres en la Música</a>
+    </div>
+
+    <div id="canto_gregoriano" class="container" style="display: none;">
+        <h2>📜 Canto Gregoriano</h2>
+        <p>El canto gregoriano es una forma de música litúrgica monódica, sin acompañamiento instrumental, utilizada en la Iglesia Católica desde el siglo VI.</p>
+        <p>Características principales:
+        <ul>
+            <li>Monódico y en latín.</li>
+            <li>Basado en escalas modales gregorianas.</li>
+            <li>Fluye libremente sin ritmo fijo.</li>
+        </ul></p>
+        <p>El Papa Gregorio I organizó y recopiló estos cantos, promoviendo su difusión en monasterios.</p>
+        <a href="#" class="button">Regresar</a>
+    </div>
+
+    <div id="musica_profana" class="container" style="display: none;">
+        <h2>🎭 Música Profana</h2>
+        <p>Fuera del ámbito eclesiástico, la música medieval también incluyó expresiones populares interpretadas por trovadores y juglares.</p>
+        <p>
+            <b>Trovadores</b>: Compositores de la nobleza que cantaban sobre amor cortés y heroísmo.
+            <br><b>Juglares</b>: Músicos ambulantes que tocaban canciones populares y narraban historias épicas.
+        </p>
+        <p>Ejemplo importante: Las <i>Cantigas de Santa María</i> de Alfonso X el Sabio.</p>
+        <a href="#" class="button">Regresar</a>
+    </div>
+
+    <div id="polifonia" class="container" style="display: none;">
+        <h2>🎼 Polifonía Medieval</h2>
+        <p>Con el avance del siglo XII, la música evolucionó hacia la polifonía, permitiendo la superposición de múltiples voces.</p>
+        <p>Principales exponentes:
+        <ul>
+            <li><b>Léonin</b>: Introdujo el órgano primitivo con dos voces.</li>
+            <li><b>Pérotin</b>: Expandió la polifonía hasta tres y cuatro voces.</li>
+        </ul>
+        </p>
+        <p>La Escuela de Notre Dame en París fue el epicentro de esta innovación musical.</p>
+        <a href="#" class="button">Regresar</a>
+    </div>
+
+    <div id="mujeres_musica" class="container" style="display: none;">
+        <h2>🎵 Mujeres en la Música Medieval</h2>
+        <p>Aunque en su mayoría dominado por hombres, algunas mujeres tuvieron un papel fundamental en la música medieval.</p>
+        <p>
+            <b>Hildegard von Bingen</b>: Monja y compositora de obras místicas y litúrgicas.
+            <br><b>Leonor de Aquitania</b>: Mecenas de trovadores y promovedora de la música profana.
+        </p>
+        <a href="#" class="button">Regresar</a>
+    </div>
+
+    <script>
+        document.querySelectorAll(".button").forEach(button => {
+            button.addEventListener("click", function() {
+                document.querySelectorAll(".container").forEach(section => {
+                    section.style.display = "none";
+                });
+                let targetId = this.getAttribute("href").substring(1);
+                if (document.getElementById(targetId)) {
+                    document.getElementById(targetId).style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
